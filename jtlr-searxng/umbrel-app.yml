@@ -1,0 +1,17 @@
+id: jtlr-searxng
+name: SearXNG
+version: "1.0.1"
+releaseNotes: "Initial release of SearXNG for Umbrel."
+description: "A privacy-respecting metasearch engine."
+developer: "SearXNG Project"
+website: "https://searxng.github.io/"
+dependencies: []
+repo: "https://github.com/searxng/searxng"
+support: "https://github.com/searxng/searxng/issues"
+port: 8080
+path: ""
+icon: "https://raw.githubusercontent.com/searxng/searxng/master/searx/static/themes/oscar/img/favicon.svg"
+category: "Utilities"
+type: "service"
+gallery:
+  - "https://raw.githubusercontent.com/searxng/searxng/master/searx/static/themes/oscar/img/searxng.svg"

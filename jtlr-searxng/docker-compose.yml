@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  searxng:
+    image: searxng/searxng:latest
+    container_name: jtlr-searxng_searxng_1
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      - BASE_URL=http://localhost:8080/
+    ports:
+      - "8080:8080"
