@@ -4,9 +4,23 @@ services:
   searxng:
     image: searxng/searxng:latest
     container_name: jtlr-searxng_searxng_1
-    restart: on-failure
-    stop_grace_period: 1m
-    environment:
-      - BASE_URL=http://localhost:8080/
+    restart: unless-stopped
     ports:
       - "8080:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=http://localhost:8080/
+      - UWSGI_WORKERS=2
+      - UWSGI_THREADS=2
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
