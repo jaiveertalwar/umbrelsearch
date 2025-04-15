@@ -1,8 +1,8 @@
 id: jtlr-searxng
 name: SearXNG
-version: "1.0.1"
-releaseNotes: "Initial release of SearXNG for Umbrel."
-description: "A privacy-respecting metasearch engine."
+version: "1.0.2"
+releaseNotes: "Adapted official SearXNG Docker Compose for Umbrel."
+description: "A privacy-respecting metasearch engine adapted for Umbrel."
 developer: "SearXNG Project"
 website: "https://searxng.github.io/"
 dependencies: []
